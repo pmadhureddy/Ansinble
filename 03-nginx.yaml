@@ -2,8 +2,7 @@
 
 - name: Intall Nginx and run
   hosts: Web
-  Tasks:
-  - name: Install Nginx
-    ansible.builtin.package: #heterogeneous module that works for all the distributions
-     name: nginx
+  tasks:
+   - name: Install Nginx
+     ansible.builtin.package: #heterogeneous module that works for all the distributions
      state: present 
