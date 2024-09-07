@@ -1,0 +1,21 @@
+- name: Data Types in Ansible
+  hosts: Web
+  vars:
+   course: "Devops with AWS" #String
+   duration: 120 #number
+   topics: #list
+   - linux
+   - shell script
+   - Ansible
+   - Terraform
+   - AWS
+   - K8
+   live: true #boolean
+   tools: #Map/dictionary/Object
+    ci: Jenkins #string
+    cm: Ansible
+    cloud: AWS
+  tasks:
+  - name: Print the Course Information
+    ansible.builtin.debug:
+      msg: "Hi, I am learning {{ course }} with duartion {{ duration }}, topics are: {{ topics}}, and live: {{ live }}, tools are: {{ tools }}"
