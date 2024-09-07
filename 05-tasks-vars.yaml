@@ -1,0 +1,21 @@
+#Variables
+
+- name: Variables to print
+  hosts: Web
+  become: yes
+  vars: #Play level All tasks can access these variables
+   COURSE: "Devops with AWS"
+   Duration: 120
+   Trainer: "Shiva Kumar Reddy"
+  tasks:
+   - name: Print the information from the Variables
+     ansible.builtin.debug: 
+      msg: "Hi, I am Learnig {{  COURSE  }} through Join Devops, Duration: {{ Duration }} Hours, Trainer: {{ Trainer  }}"
+   - name: Print the information from the Variables
+     vars: #Task Level variables
+      COURSE: "Ansible"
+     ansible.builtin.debug: 
+      msg: "Hi, I am Learnig {{  COURSE  }} through Join Devops, Duration: {{ Duration }} Hours, Trainer: {{ Trainer  }}"   
+   - name: Print the information from the Variables
+     ansible.builtin.debug: 
+      msg: "Hi, I am Learnig {{  COURSE  }} through Join Devops, Duration: {{ Duration }} Hours, Trainer: {{ Trainer  }}"      
