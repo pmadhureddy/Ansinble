@@ -1,5 +1,6 @@
 - name: Data Types in Ansible
   hosts: local
+  connection: local
   vars:
    course: "Devops with AWS" #String
    duration: 120 #number
