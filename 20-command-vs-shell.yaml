@@ -3,4 +3,5 @@
   connection: local
   tasks:
    - name: Execute the Command
-     ansible.builtin.shell: ls -ltr > /tmp/output.txt
+     ansible.builtin.shell: ls -ltr > /tmp/output.txt #It logins into the server and execute the command
+#command is more secure than shell
