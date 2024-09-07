@@ -5,4 +5,5 @@
   tasks:
    - name: Install Nginx
      ansible.builtin.package: #heterogeneous module that works for all the distributions
-     state: present 
+      name: nginx
+      state: present 
