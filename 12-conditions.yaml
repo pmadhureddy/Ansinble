@@ -3,7 +3,7 @@
 - name: check a number conditionally
   hosts: local
   connection: local
-  vars_propmt: 
+  vars_prompt: 
    - name: number
      prompt: please enter the number...
      private: false
