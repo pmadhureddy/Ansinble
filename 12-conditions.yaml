@@ -1,0 +1,19 @@
+#Ansible Conditions
+
+- name: check a number conditionally
+  hosts: local
+  connection: local
+  vars_propmt: 
+   - name: number
+     prompt: please enter the number...
+     private: false
+  tasks:
+  - name: check the value given is less than or 10 and Print
+    ansible.builtin.debug:
+     msg: "Given number {{ number }} is less than 10"
+    when: number < 10 #Conditional Expression
+  - name: Check the given value is greater than or equal to 10 and print
+    ansible.builtin.debug: 
+     msg: "Given number {{ number }} is greater than or equal to 10"
+    when: number >= 10   
+   
