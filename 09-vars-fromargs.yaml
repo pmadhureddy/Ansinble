@@ -1,0 +1,8 @@
+#Variables from Args
+
+- name: Variables from the Arguments
+  hosts: Web
+  tasks: 
+  - name: Print the course info from the Args
+    ansible.builtin.debug:
+     msg: "Hello {{ NAME }}, Good {{ GREETING }}!!!"
