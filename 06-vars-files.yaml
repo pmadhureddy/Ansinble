@@ -7,4 +7,4 @@
   tasks:
   - name: Print the cousre information
     ansible.builtin.debug:
-     msg: "Hi, I am Learnig {{  COURSE  }} through Join Devops, Duration: {{ Duration }} Hours, Trainer: {{ Trainer  }}"   
+     msg: "Hi, I am Learnig {{  COURSE  }} through Join Devops, Duration: {{ DURATION }} Hours, Trainer: {{ Trainer  }}"   
