@@ -1,6 +1,5 @@
 - name: Ansible loops
-  hosts: local
-  connection: local
+  hosts: Web
   become: yes
   tasks:
   - name: Install Packages
