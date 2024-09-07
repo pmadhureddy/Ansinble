@@ -10,16 +10,16 @@
     vars: 
      greeting: "Hello Madhu"
     ansible.builtin.debug:
-     msg: "Hello {{ greeting | upper }}"
+     msg: "{{ greeting | upper }}"
 
   - name: Convert to Lower Case
     vars: 
      greeting: "Hello Madhu"
     ansible.builtin.debug:
-     msg: "Hello {{ greeting | lower }}"
+     msg: "{{ greeting | lower }}"
 
   - name: Get the Unique values
     vars: 
      numbers: [1,2,3,4,1,4,5,7,3]
     ansible.builtin.debug:
-     msg: "Hello {{ greeting | unique }}"
+     msg: "{{ numbers | unique }}"
