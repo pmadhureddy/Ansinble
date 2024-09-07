@@ -1,0 +1,9 @@
+#Taking the values from the Inventory file
+
+
+- name: Variables from the Inventory File
+  hosts: Web
+  tasks:
+   - name: Print the course info by taking values from the Inventory file
+     ansible.builtin.debug:
+      msg: "Hi, I am Learnig {{  COURSE  }} through Join Devops, Duration: {{ DURATION }} Hours, Trainer: {{ TRAINER  }}"   
