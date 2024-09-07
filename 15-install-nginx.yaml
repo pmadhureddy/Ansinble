@@ -1,0 +1,20 @@
+#Intall Nginx based on Linux Distributions
+
+- name: Install Nginx based on conditions of Linux Distributions
+  hosts: Web
+  become: yes
+  tasks:
+  - name: Print the gathered facts
+    ansible.builtin.debug:
+     msg: "Here it is Gathered Fatcs {{ ansible_facts }}"
+
+  - name: Install Nginx If redhat
+    ansible.builtin.dnf:
+     name: nginx
+     state: present
+    when: {{ ansible_os_family == 'RedHat' }}
+  - name: Install Nginx If Debian
+    ansible.builtin.dnf:
+    name: nginx
+    state: present
+    when: {{ ansible_os_family == 'Debian' }}
